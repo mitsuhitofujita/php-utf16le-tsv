@@ -1,0 +1,17 @@
+{
+    "name": "mitsuhitofujita/php-utf16le-tsv",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mitsuhito Fujita",
+            "email": "mitsuhitofujita@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Tsv\\": "src/Tsv"
+        }
+    }
+}
+
