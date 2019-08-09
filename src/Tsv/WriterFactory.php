@@ -14,7 +14,7 @@ class WriterFactory
 	{
 		$filtered = "php://filter/write=convert.iconv.utf-8%2Futf-16le/resource=$filename";
 		$file = new SplFileObject($filtered, 'wb');
-		$file->setCsvControl("\t");
+		$file->setCsvControl("\t", "\"", "\t");
 		$file->fwrite("\xEF\xBB\xBF");
 		return $file;
 	}
