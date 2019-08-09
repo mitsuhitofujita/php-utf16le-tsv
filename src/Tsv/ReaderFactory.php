@@ -14,8 +14,8 @@ class ReaderFactory
 	{
 		$filtered = "php://filter/read=convert.iconv.utf-16%2Futf-8/resource=$filename";
 		$file = new SplFileObject($filtered, 'rb');
-		$file->setFlags(SplFileObject::READ_CSV | SplFileObject::SKIP_EMPTY | SplFileObject::READ_AHEAD);
-		$file->setCsvControl("\t");
+		$file->setFlags(SplFileObject::READ_CSV | SplFileObject::SKIP_EMPTY | SplFileObject::READ_AHEAD | SplFileObject::DROP_NEW_LINE);
+		$file->setCsvControl("\t", "\"", "\t");
 		return $file;
 	}
 }
