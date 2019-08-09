@@ -12,6 +12,10 @@
         "psr-4": {
             "Tsv\\": "src/Tsv"
         }
+    },
+    "scripts": {
+        "run":[
+            "php src/sample.php"
+        ]
     }
 }
-
